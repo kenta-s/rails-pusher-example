@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is to learn how to take advantages of using pusher.com with a Rails application.  
+With the awesome service, you no longer have to set up your own Websocket server.  
+Amazing.
 
-Things you may want to cover:
+# Preparation
 
-* Ruby version
+Create a pusher account here:  
+https://pusher.com/
 
-* System dependencies
+# Environment variables
 
-* Configuration
+Set the environment variables.  
+You can check these values on the dashboard of pusher.com
 
-* Database creation
+```
+$ export PUSHER_APP_ID=< your app_id >  
+$ export PUSHER_KEY=< your key >  
+$ export PUSHER_SECRET=< your secret key>  
+```
 
-* Database initialization
+# run the server
 
-* How to run the test suite
+`$ rails s`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
