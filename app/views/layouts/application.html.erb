@@ -12,14 +12,18 @@
       // Enable pusher logging - don't include this in production
       Pusher.logToConsole = true;
 
-      var pusher = new Pusher(<%= ENV["PUSHER_KEY"] %>, {
+      var pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>', {
         encrypted: true
       });
 
       var channel = pusher.subscribe('test_channel');
       channel.bind('my_event', function(data) {
-        alert(data.message);
+        var messagelog = document.getElementById('messagelog');
+        var messagediv = document.createElement('div');
+        messagediv.innerHTML = data.message;
+        messagelog.appendChild(messagediv);
       });
+
     </script>
   </head>
 
